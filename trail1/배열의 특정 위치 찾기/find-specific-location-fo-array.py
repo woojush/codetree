@@ -1,8 +1,5 @@
 arr=list(map(int,input().split()))
-sum1=sum2=0
-for i in range(1,10,2):
-    sum1+=arr[i]
-for i in range(2,10,3):
-    sum2+=arr[i]
-print(f"{sum1} {sum2/3:.1f}")
+even_array=arr[1::2]
+array3=arr[2::3]
+print(f"{sum(even_array)} {sum(array3)/len(array3):.1f}")
     
