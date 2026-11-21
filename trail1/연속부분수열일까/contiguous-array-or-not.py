@@ -13,7 +13,6 @@
 # B[0]이 A의 몇번째 인덱스에 있는지 index() 함수를 활용하여 찾는다. (그 인덱스를 idx라 하자.)
 # B의 원소 개수만큼 for문을 돌린다. ex N2=3 -> for i in range(1,3):
 # A[idx+i]=B[i]가 아닌 경우, print("No") & sys.exit()
-import sys
 n1,n2=map(int,input().split())
 
 A=input().split()
@@ -21,7 +20,7 @@ B=input().split()
 found=False
 for i in range(0,n1-n2+1):
     if A[i:i+n2]==B:
-        print("Yes")
-        sys.exit()
-print("No")
+        found=True
+        break
+print("Yes" if found else "No")
 
